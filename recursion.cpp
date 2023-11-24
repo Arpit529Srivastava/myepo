@@ -1,16 +1,21 @@
 #include <iostream>
 using namespace std;
- int cnt=1;
-int print(){
-   
-    if(cnt==4){
-        return cnt;}
+
+void  Name(int i,int n){
     
-    cnt++;
-    return print();
+    if(i>n){
+        return;
+    }
+    else{
+        cout<<i<<endl;
+        Name(i+1,n);
+    }
+   
+
 }
 int main(){
-   int a= print();
-   cout<<a<<endl;
+   int n;
+   cin>>n;
+   Name(1,n);
+   
 }
-
