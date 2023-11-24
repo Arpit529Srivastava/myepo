@@ -3,12 +3,13 @@ using namespace std;
 
 void Name(int i,int n){
     
-    if(i>n){
+    if(i<1){
         return;
     }
     else{
+        
+        Name(i-1,n);
         cout<<i<<endl;
-        Name(i+1,n);
     }
    
 
@@ -16,6 +17,6 @@ void Name(int i,int n){
 int main(){
    int n;
    cin>>n;
-   Name(1,n);
+   Name(n,n);
    
 }
