@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void  Name(int i,int n){
+void Name(int i,int n){
     
     if(i>n){
         return;
