@@ -1,24 +1,32 @@
-#include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
-int main(){
-    int k,l,m,n;
-    int ct=0;
-    long long d;
-    cin>>k>>l>>m>>n>>d;
-    
-    ct=d;
-    if(k==1 ||l==1 ||m==1 ||n==1 ){
-            
-            cout<<d<<endl;
+int main()
+{
+    string s;
+    getline(cin,s);
+    int a=0,b=0;
+    for(int i=0;i!='\0';i++)
+    {
+        
+        if(s[i]!='1')
+        {
+            a++;
+            b=0;
         }
-        else{
-    for(int i=1; i<=d; i++){
-        if((i%k!=0) && (i%l!=0) && (i%n!=0) && (i%m!=0))
-            ct--;
-        
-        
+        else if (s[i]!='0')
+        {
+            b++;
+            a=0;
+        }
     }
-    cout<<ct<<endl;
+    cout<<a<<" "<<b;
+    if(a>=7 || b>=7)
+    {
+        cout<<"NO";
     }
-    
+    else
+    {
+        cout<<"YES";
+    }
+
 }
