@@ -6,7 +6,7 @@ private:
 int length;//agr nhi use karenge to length will be inaccessible
 public:
 Box(): length(0) { }//constructor
-friend int printLength(Box); //friend function
+int printLength(Box); //friend function
 };
 int printLength(Box b)
 {
